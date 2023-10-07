@@ -88,7 +88,7 @@ La classe `Train` est responsable de l'entraînement des agents dans l'environne
 
 ### 4. main
 
-
+Le script principal `main.py` entraîne deux agents DQN dans l'environnement `CancerGrowthEnv` pour gérer la croissance tumorale.
 
 
 ## Contribuer
