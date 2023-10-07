@@ -19,7 +19,6 @@ Les principaux objectifs du projet sont les suivants :
 ## Table des matières
 
 - [Installation](#installation)
-- [Utilisation](#utilisation)
 - [Structure du Projet](#structure-du-projet)
 - [Contribuer](#contribuer)
 - [Licence](#licence)
@@ -50,6 +49,49 @@ cd rl-cancer-treatment
 3. Installez les dépendances requises à l'aide de `pip` en utilisant le fichier `requirements.txt`:
    pip install -r requirements.txt
    
+ ##Structure de projet 
+ # Cancer Growth Simulation
+
+## Classes du Projet
+
+### 1. CancerGrowthEnv
+
+La classe `CancerGrowthEnv` est une implémentation d'un environnement Gym personnalisé. Elle modélise la croissance d'une tumeur cancéreuse et permet aux agents d'agir en choisissant de traiter ou de ne pas traiter la tumeur. Voici quelques détails importants sur cette classe :
+
+- **`__init__(self, num_agents=2)`** : Le constructeur de la classe permet de spécifier le nombre d'agents (par défaut à 2). Il définit également les espaces d'observation et d'action pour les agents.
+
+- **`step(self, actions)`** : Cette méthode permet aux agents de prendre des actions en fonction des actions fournies en entrée. Elle calcule les récompenses pour chaque agent et définit si l'épisode est terminé.
+
+- **`reset(self, verbose=True)`** : Cette méthode réinitialise l'état de l'environnement pour chaque agent. Si `verbose` est défini sur True, elle affiche un message de réinitialisation.
+
+### 2. DQNAgent
+
+La classe `DQNAgent` est un agent d'apprentissage profond par renforcement qui utilise un réseau de neurones pour prendre des décisions dans l'environnement `CancerGrowthEnv`. Voici quelques détails importants sur cette classe :
+
+- **`__init__(self, state_size, action_size, verbose=0)`** : Le constructeur de la classe permet de spécifier la taille de l'état et de l'action, ainsi qu'un paramètre optionnel `verbose` pour le niveau de verbosité.
+
+- **`_build_model(self)`** : Cette méthode construit un modèle de réseau de neurones utilisé par l'agent pour prendre des décisions.
+
+- **`remember(self, state, action, reward, next_state, done)`** : Cette méthode permet à l'agent de mémoriser l'expérience passée dans son buffer de mémoire.
+
+- **`act(self, state)`** : Cette méthode permet à l'agent de choisir une action en fonction de l'état actuel. Elle peut prendre en compte l'exploration en utilisant epsilon-greedy.
+
+- **`replay(self)`** : Cette méthode permet à l'agent d'apprendre à partir de ses expériences passées en effectuant une mise à jour du modèle.
+
+### 3. Train
+
+La classe `Train` est responsable de l'entraînement des agents dans l'environnement `CancerGrowthEnv`. Elle coordonne les interactions entre les agents et l'environnement, gère les récompenses et les mises à jour des modèles. Voici quelques détails importants sur cette classe :
+
+- **`__init__(self, env, agents, num_episodes)`** : Le constructeur de la classe prend l'environnement, les agents et le nombre d'épisodes comme paramètres.
+
+- **`train(self)`** : Cette méthode exécute l'entraînement des agents sur un certain nombre d'épisodes. Elle gère également la sauvegarde du modèle pré-entraîné et des récompenses.
+
+### 4. main
+
+Il semble que la classe `main` n'ait pas été fournie dans les extraits de code fournis. Si vous avez une classe `main` qui orchestre l'exécution de l'ensemble du programme, vous pouvez l'inclure ici et expliquer son rôle dans votre projet.
+
+Ces informations fournissent une vue d'ensemble des classes utilisées dans votre projet et peuvent aider les utilisateurs à comprendre comment votre code est organisé. N'hésitez pas à ajouter plus de détails ou d'exemples de code si nécessaire.
+
 
 ## Contribuer
 
@@ -62,6 +104,7 @@ Les contributions à ce projet sont les bienvenues ! Pour contribuer, suivez ces
 5. Créez une Pull Request sur GitHub à partir de votre fork.
 
 Nous examinerons vos contributions avec attention et les intégrerons au projet si elles sont pertinentes.
+
 
 ## Licence
 
