@@ -1,11 +1,10 @@
-# RL Cancer Treatment
+# RL Cancer Treatment 🩺
 
-
-## Description
+## Description 📚
 
 Le projet RL Cancer Treatment vise à développer un système d'apprentissage par renforcement (RL) pour aider à la prise de décisions de traitement dans le contexte de la croissance tumorale. Il utilise l'apprentissage automatique pour optimiser les décisions de traitement en modélisant la croissance tumorale et en prenant des décisions basées sur cette modélisation.
 
-## Objectifs
+## Objectifs 🎯
 
 Les principaux objectifs du projet sont les suivants :
 
@@ -16,47 +15,37 @@ Les principaux objectifs du projet sont les suivants :
 5. Étendre le projet à un contexte multi-agent pour mieux modéliser la situation médicale réelle.
 6. Personnaliser l'agent DQN vers une architecture double dans le contexte multi-agent pour améliorer les performances.
 
-## Table des matières
+## Table des matières 🗂️
 
 - [Installation](#installation)
 - [Structure du Projet](#structure-du-projet)
 - [Contribuer](#contribuer)
 - [Licence](#licence)
 
-## Installation
+## Installation 🚀
 
 Pour utiliser ce projet, suivez les étapes ci-dessous :
 
+1. **Créer un environnement python 🐍 :**
+   - Assurez-vous d'avoir Python (version 3.6 ou supérieure) installé.
+   - Installez `pip` (gestionnaire de packages Python).
 
-1. Créer un environement python :
-# Mon Environnement Python Personnalisé (mon_env)
+2. **Clonez ce dépôt 🧬 :**
+   ```bash
+   git clone https://github.com/votre_utilisateur/rl-cancer-treatment.git
+   cd rl-cancer-treatment
 
-Ceci est un environnement Python personnalisé que j'ai créé pour effectuer des tâches spécifiques. Vous pouvez suivre ces instructions pour configurer l'environnement sur votre système.
 
-#Prérequis
+Installez les dépendances requises 📦 :
+    pip install -r requirements.txt
 
-Avant de configurer et d'utiliser l'environnement `mon_env`, assurez-vous d'avoir les éléments suivants installés sur votre système :
-
-- [Python](https://www.python.org/downloads/) (version 3.6 ou supérieure)
-- [pip](https://pip.pypa.io/en/stable/installing/) (gestionnaire de packages Python)
-  
-2. Clonez ce dépôt :
-
-bash
-git clone https://github.com/votre_utilisateur/rl-cancer-treatment.git
-cd rl-cancer-treatment
-
-3. Installez les dépendances requises à l'aide de `pip` en utilisant le fichier `requirements.txt`:
-   pip install -r requirements.txt
    
- ## Structure du Projet
- # Cancer Growth Simulation
+ ## Structure du Projet 🏗️
 
-## Classes du Projet
+ Structure du Projet 🏗️
 
-### 1. CancerGrowthEnv
-
-La classe `CancerGrowthEnv` est une implémentation d'un environnement Gym personnalisé. Elle modélise la croissance d'une tumeur cancéreuse et permet aux agents d'agir en choisissant de traiter ou de ne pas traiter la tumeur. Voici quelques détails importants sur cette classe :
+1. CancerGrowthEnv 🏥
+est une implémentation d'un environnement Gym personnalisé. Elle modélise la croissance d'une tumeur cancéreuse et permet aux agents d'agir en choisissant de traiter ou de ne pas traiter la tumeur. Voici quelques détails importants sur cette classe :
 
 - **`__init__(self, num_agents=2)`** : Le constructeur de la classe permet de spécifier le nombre d'agents (par défaut à 2). Il définit également les espaces d'observation et d'action pour les agents.
 
@@ -64,8 +53,8 @@ La classe `CancerGrowthEnv` est une implémentation d'un environnement Gym perso
 
 - **`reset(self, verbose=True)`** : Cette méthode réinitialise l'état de l'environnement pour chaque agent. Si `verbose` est défini sur True, elle affiche un message de réinitialisation.
 
-### 2. DQNAgent
 
+2. DQNAgent 🤖
 La classe `DQNAgent` est un agent d'apprentissage profond par renforcement qui utilise un réseau de neurones pour prendre des décisions dans l'environnement `CancerGrowthEnv`. Voici quelques détails importants sur cette classe :
 
 - **`__init__(self, state_size, action_size, verbose=0)`** : Le constructeur de la classe permet de spécifier la taille de l'état et de l'action, ainsi qu'un paramètre optionnel `verbose` pour le niveau de verbosité.
@@ -78,20 +67,19 @@ La classe `DQNAgent` est un agent d'apprentissage profond par renforcement qui u
 
 - **`replay(self)`** : Cette méthode permet à l'agent d'apprendre à partir de ses expériences passées en effectuant une mise à jour du modèle.
 
-### 3. Train
 
+3. Train 🚂
 La classe `Train` est responsable de l'entraînement des agents dans l'environnement `CancerGrowthEnv`. Elle coordonne les interactions entre les agents et l'environnement, gère les récompenses et les mises à jour des modèles. Voici quelques détails importants sur cette classe :
 
 - **`__init__(self, env, agents, num_episodes)`** : Le constructeur de la classe prend l'environnement, les agents et le nombre d'épisodes comme paramètres.
 
 - **`train(self)`** : Cette méthode exécute l'entraînement des agents sur un certain nombre d'épisodes. Elle gère également la sauvegarde du modèle pré-entraîné et des récompenses.
-
-### 4. main
-
+  
+4. main 🚀
 Le script principal `main.py` entraîne deux agents DQN dans l'environnement `CancerGrowthEnv` pour gérer la croissance tumorale.
 
 
-## Contribuer
+## Contribuer 🤝
 
 Les contributions à ce projet sont les bienvenues ! Pour contribuer, suivez ces étapes :
 
@@ -104,9 +92,9 @@ Les contributions à ce projet sont les bienvenues ! Pour contribuer, suivez ces
 Nous examinerons vos contributions avec attention et les intégrerons au projet si elles sont pertinentes.
 
 
-## Licence
+## Licence 📄
 
-Ce projet est sous licence MIT. Vous pouvez consulter le fichier [LICENSE](LICENSE) pour plus de détails sur les conditions de licence.
+- [HEBBADJ NESRINE](https://github.com/Nesrineheb)
 
 
 
