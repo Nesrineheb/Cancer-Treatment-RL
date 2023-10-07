@@ -49,7 +49,7 @@ cd rl-cancer-treatment
 3. Installez les dépendances requises à l'aide de `pip` en utilisant le fichier `requirements.txt`:
    pip install -r requirements.txt
    
- ##Structure de projet 
+##Structure du Projet
  # Cancer Growth Simulation
 
 ## Classes du Projet
@@ -88,9 +88,7 @@ La classe `Train` est responsable de l'entraînement des agents dans l'environne
 
 ### 4. main
 
-Il semble que la classe `main` n'ait pas été fournie dans les extraits de code fournis. Si vous avez une classe `main` qui orchestre l'exécution de l'ensemble du programme, vous pouvez l'inclure ici et expliquer son rôle dans votre projet.
 
-Ces informations fournissent une vue d'ensemble des classes utilisées dans votre projet et peuvent aider les utilisateurs à comprendre comment votre code est organisé. N'hésitez pas à ajouter plus de détails ou d'exemples de code si nécessaire.
 
 
 ## Contribuer
