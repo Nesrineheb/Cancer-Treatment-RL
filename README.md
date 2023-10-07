@@ -49,7 +49,7 @@ cd rl-cancer-treatment
 3. Installez les dépendances requises à l'aide de `pip` en utilisant le fichier `requirements.txt`:
    pip install -r requirements.txt
    
-##Structure du Projet
+ ## Structure du Projet
  # Cancer Growth Simulation
 
 ## Classes du Projet
